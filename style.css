@@ -574,3 +574,156 @@ body {
   background: var(--accent-primary);
   box-shadow: 0 0 10px var(--accent-primary);
 }
+/* --- Mobile Responsive Design --- */
+@media (max-width: 768px) {
+  /* Hide sidebar by default on mobile */
+  .stats-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .stats-sidebar:not(.collapsed) {
+    transform: translateX(0);
+  }
+
+  /* Full width chat on mobile */
+  .chat-main {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Adjust header for mobile */
+  .nav-header {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .lang-toggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  /* Adjust input section for mobile */
+  .input-section {
+    padding: 1rem;
+  }
+
+  .input-container {
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+  }
+
+  #chat-input {
+    font-size: 0.9rem;
+  }
+
+  .btn-mic {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+
+  .btn-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Adjust messages for mobile */
+  .message {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    max-width: 90%;
+  }
+
+  /* Adjust stat cards for mobile */
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  /* Weather widget mobile */
+  .weather-widget {
+    padding: 1rem;
+  }
+
+  .weather-temp {
+    font-size: 1.1rem;
+  }
+
+  /* Voice wave mobile */
+  .voice-wave {
+    gap: 3px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .wave-bar {
+    width: 2px;
+  }
+
+  /* Hide particles on mobile for performance */
+  .particles-container {
+    display: none;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .stats-sidebar {
+    width: 280px;
+  }
+
+  .chat-main {
+    flex: 1;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .stats-sidebar {
+    width: 100%;
+  }
+
+  .nav-header {
+    font-size: 0.9rem;
+  }
+
+  .brand-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-container {
+    border-radius: 50px;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  /* Stack header items on very small screens */
+  .nav-header > div:last-child {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+}
